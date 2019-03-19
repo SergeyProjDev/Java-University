@@ -1,4 +1,5 @@
 import java.util.Collections;
+import java.util.Iterator;
 import java.util.Vector;
 
 public class Program {
@@ -21,7 +22,7 @@ public class Program {
 
 
 
-class DoubleVector{
+class DoubleVector implements Iterator<Double>{
 	
 	private Vector<Double> vec = new Vector<Double>(); 
 	
@@ -35,7 +36,7 @@ class DoubleVector{
 			return false;
 	}
 	
-	public double next() {
+	public Double next() {
 		return vec.get(elementCount);
 	}
 	
